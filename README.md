@@ -1,2 +1,11 @@
-# c-sharp-basic
-This repository contains Codelex course complete tasks and maybe something else😀.
+# C# Syllabus
+
+## [Work Environment Setup](./work-environment-setup)
+
+## [C# Basics](./csharp-basics)
+
+## [Entity Framework](./entity-framework)
+
+## [SOLID](./solid)
+
+## [Sql training](https://github.com/codelex-io/sql-training)
