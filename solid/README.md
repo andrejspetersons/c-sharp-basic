@@ -1,1 +1,0 @@
- - [What is SOLID](https://www.baeldung.com/solid-principles)
