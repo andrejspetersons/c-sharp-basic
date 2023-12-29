@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace PositiveNegativeNumber
 {
@@ -7,22 +8,9 @@ namespace PositiveNegativeNumber
         static void Main(string[] args)
         {
             Console.WriteLine("Enter the number.");
-            var input = Console.ReadKey();
-            /*
-            fixme
-            if (?)
-            {
-                Console.WriteLine("Number is positive");
-            } 
-            else if (?) 
-            {
-                Console.WriteLine("Number is negative");
-            } 
-            else 
-            {
-                Console.WriteLine("Number is zero");
-            }
-            */
+            var input = Console.ReadLine();
+            decimal number = Convert.ToDecimal(input, CultureInfo.InvariantCulture);
+            Console.WriteLine($"Number is {(number > 0 ? "Positive": (number < 0 ? "Negative" : "Zero"))}");        
         }
     }
 }

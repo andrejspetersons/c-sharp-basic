@@ -3,13 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PositiveNegativeNumber", "PositiveNegativeNumber\PositiveNegativeNumber.csproj", "{A2ABFE79-82C9-44CF-BF0A-A067DAA7A966}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PositiveNegativeNumber", "PositiveNegativeNumber\PositiveNegativeNumber.csproj", "{A2ABFE79-82C9-44CF-BF0A-A067DAA7A966}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LargestNumber", "LargestNumber\LargestNumber.csproj", "{53E612A0-B352-4B2B-8942-5B7E7097AC4C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LargestNumber", "LargestNumber\LargestNumber.csproj", "{53E612A0-B352-4B2B-8942-5B7E7097AC4C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TenBillion", "TenBillion\TenBillion.csproj", "{77AB50C0-F0DA-46B0-8299-7AB0B9404B03}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TenBillion", "TenBillion\TenBillion.csproj", "{77AB50C0-F0DA-46B0-8299-7AB0B9404B03}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetTheCentury", "GetTheCentury\GetTheCentury.csproj", "{3FFBD995-2B38-44A5-BDC8-E1E767E0EFCB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetTheCentury", "GetTheCentury\GetTheCentury.csproj", "{3FFBD995-2B38-44A5-BDC8-E1E767E0EFCB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrintDayInWord", "PrintDayInWord\PrintDayInWord.csproj", "{A7600FA1-4943-414A-BDE8-4F4A9ADA572D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleCalculator", "SimpleCalculator\SimpleCalculator.csproj", "{2B9C58CB-6829-472C-8288-A7EF4882289D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rock-Paper-Scissors", "Rock-Paper-Scissors\Rock-Paper-Scissors.csproj", "{C211FD80-F0D0-45AB-A18A-5083F6A1F028}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneKeyPad", "PhoneKeyPad\PhoneKeyPad.csproj", "{DBA66C53-C453-41DA-AE4D-9BDDAF5B8E49}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +41,22 @@ Global
 		{3FFBD995-2B38-44A5-BDC8-E1E767E0EFCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3FFBD995-2B38-44A5-BDC8-E1E767E0EFCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3FFBD995-2B38-44A5-BDC8-E1E767E0EFCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7600FA1-4943-414A-BDE8-4F4A9ADA572D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7600FA1-4943-414A-BDE8-4F4A9ADA572D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7600FA1-4943-414A-BDE8-4F4A9ADA572D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7600FA1-4943-414A-BDE8-4F4A9ADA572D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B9C58CB-6829-472C-8288-A7EF4882289D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B9C58CB-6829-472C-8288-A7EF4882289D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B9C58CB-6829-472C-8288-A7EF4882289D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B9C58CB-6829-472C-8288-A7EF4882289D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C211FD80-F0D0-45AB-A18A-5083F6A1F028}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C211FD80-F0D0-45AB-A18A-5083F6A1F028}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C211FD80-F0D0-45AB-A18A-5083F6A1F028}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C211FD80-F0D0-45AB-A18A-5083F6A1F028}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBA66C53-C453-41DA-AE4D-9BDDAF5B8E49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBA66C53-C453-41DA-AE4D-9BDDAF5B8E49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBA66C53-C453-41DA-AE4D-9BDDAF5B8E49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBA66C53-C453-41DA-AE4D-9BDDAF5B8E49}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
