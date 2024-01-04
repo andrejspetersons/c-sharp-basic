@@ -1,8 +1,10 @@
-﻿namespace Exercise4
+﻿using System;
+using System.Linq;
+
+namespace Exercise4
 {
     class Program
     {
-        //TODO: Write a C# program to test if an array contains a specific value.
         private static void Main(string[] args)
         {
             int[] myArray =
@@ -12,13 +14,19 @@
                 1456, 2265, 1457, 2456
             };
 
-            /*
-            fixme - check if contains number 1245 
-            for (?) {
-                ......
-                Console.WriteLine("Contains!");
+            Console.WriteLine("Enter specific value to find:");
+            var valueToFind = Convert.ToInt32(Console.ReadLine());
+            bool isFound = myArray.Contains(Convert.ToInt32(valueToFind));
+
+            if (isFound)
+            {
+                Console.WriteLine($"Value {valueToFind} contains in array");
             }
-            */
+            else
+            {
+                Console.WriteLine($"Value {valueToFind} not found");
+            }
+
         }
     }
 }
