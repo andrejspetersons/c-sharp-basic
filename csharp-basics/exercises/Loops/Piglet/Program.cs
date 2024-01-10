@@ -23,9 +23,7 @@
                 totalscore += diceNumber;
                 Console.WriteLine($"You rolled a {diceNumber}!");
                 Console.Write("Roll again?");
-                answer = GetValidAnswer();
-                
-                 
+                answer = GetValidAnswer();                 
             }
 
             Console.WriteLine($"You got {totalscore} points");
@@ -41,8 +39,7 @@
                 if(answer=="yes"||
                    answer=="Yes"||
                    answer=="y"||
-                   answer=="n")
-                    
+                   answer=="n")                    
                 {
                     break;
                 }
@@ -50,7 +47,6 @@
                 {
                     Console.WriteLine("Invalid input!Provide yes or no answer.");
                 }
-
             }
 
             return answer;
