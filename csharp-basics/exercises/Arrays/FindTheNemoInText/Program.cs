@@ -18,6 +18,7 @@
 
             return indexOfNemo;
         }
+        
         static void Main(string[] args)
         {
             int resultPos1 = FindNemo("I am finding Nemo !");
