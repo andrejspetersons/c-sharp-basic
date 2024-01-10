@@ -33,8 +33,7 @@
                 if (moveNextLine)
                 {
                     Console.WriteLine();
-                }
-               
+                }               
             }
         }
     }
