@@ -10,17 +10,14 @@ namespace RollTwoDice
             int sum = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine($"Desired sum {sum}:");
             Random random = new Random();
-
-            while (true)
+            int firstDiceNumber = 0;
+            int secondDiceNumber = 0;
+        
+            while (firstDiceNumber+secondDiceNumber!=sum)
             {
-                int firstDiceNumber = random.Next(1, 7);
-                int secondDiceNumber = random.Next(1, 7);
+                firstDiceNumber = random.Next(1, 7);
+                secondDiceNumber = random.Next(1, 7);
                 Console.WriteLine($"{firstDiceNumber} and {secondDiceNumber} = {firstDiceNumber + secondDiceNumber}");
-
-                if (firstDiceNumber + secondDiceNumber == sum)
-                {
-                    break;
-                }
             }
         }
     }
