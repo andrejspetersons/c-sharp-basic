@@ -19,7 +19,8 @@
                 {
                     Console.Write(k);
                 }
-                Console.WriteLine();               
+                Console.WriteLine();
+                
             }          
         }
     }
