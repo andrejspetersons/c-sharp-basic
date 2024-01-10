@@ -11,6 +11,7 @@ namespace Reverse_the_Case
 
             return result;
         }
+        
         static void Main(string[] args)
         {
             Console.WriteLine("Enter word:");
