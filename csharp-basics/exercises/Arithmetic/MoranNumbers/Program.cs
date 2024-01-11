@@ -14,9 +14,10 @@ namespace MoranNumbers
                     return false;
                 }
             }
-
             return true;
+
         }
+
         public static string Moran(int number)
         {
             char[] digitArray = number.ToString().ToCharArray();
@@ -34,13 +35,12 @@ namespace MoranNumbers
                 return result;
 
             }
-
             return "Neither";
 
         }
+
         static void Main(string[] args)
         {
-
             Console.WriteLine("Input number:");
             int number = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine($"Entered number is {Moran(number)} number");

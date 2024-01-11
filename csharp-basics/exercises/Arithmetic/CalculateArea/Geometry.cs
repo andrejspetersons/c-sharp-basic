@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace CalculateArea
 {
-    
     public class Geometry
     {
         static double pi = Math.PI;
+
         public static double AreaOfCircle(decimal radius)
         {
             if (radius < 0)
@@ -21,8 +21,7 @@ namespace CalculateArea
             else
             {
                 return pi * Math.Pow((double)radius,2);
-            }
-            
+            }        
         }
 
         public static double AreaOfRectangle(decimal length, decimal width)
@@ -49,8 +48,7 @@ namespace CalculateArea
             else
             {
                 return (double)(ground * h)/2.0;
-            }
-            
+            } 
         }
     }
 }

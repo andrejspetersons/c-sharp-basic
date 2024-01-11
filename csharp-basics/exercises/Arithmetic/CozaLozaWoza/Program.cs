@@ -12,10 +12,8 @@
             int lowerBound = 1;
             int upperBound = 110;
            
-
             for(int i = lowerBound; i <= upperBound; i++)
             {
-
                 bool dividedByThree = i % 3 == 0;
                 bool dividedByFive = i % 5 == 0;
                 bool dividedBySeven = i % 7 == 0;
@@ -65,8 +63,6 @@
                 {
                     Console.WriteLine();
                 }
-
-
             }
         }
     }
