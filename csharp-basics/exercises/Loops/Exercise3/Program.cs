@@ -14,6 +14,7 @@
 
             return arrayNumbers;
         }
+        
         static void Main(string[] args)
         {
             Console.Write("Enter size of array:");
