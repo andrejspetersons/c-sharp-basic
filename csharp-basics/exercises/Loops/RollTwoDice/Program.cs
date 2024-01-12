@@ -12,7 +12,7 @@ namespace RollTwoDice
             Random random = new Random();
             int firstDiceNumber = 0;
             int secondDiceNumber = 0;
-        
+                
             while (firstDiceNumber+secondDiceNumber!=sum)
             {
                 firstDiceNumber = random.Next(1, 7);
