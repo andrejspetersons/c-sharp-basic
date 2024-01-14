@@ -7,6 +7,7 @@ namespace ListExercise9
     {
         static void Main(string[] args)
         {
+            var union = new List<string>();
             var firstList = new List<string>
             {
                 "Red",
@@ -28,8 +29,10 @@ namespace ListExercise9
             };
 
             Console.WriteLine(string.Join(",", secondList));
-            //TODO: Write a C# program to join two lists.
-            //...
+
+            union.AddRange(firstList);
+            union.AddRange(secondList);
+            Console.WriteLine(string.Join(",",union));
         }
     }
 }

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace ListExercise1
 {
@@ -6,10 +8,16 @@ namespace ListExercise1
     {
         private static void Main(string[] args)
         {
-            //TODO: Write a C# program to create a new list, add some elements (string) and print out the collection.
-            //TODO: Add 5 colors to list
+            List<string> colours = new List<string>
+            {
+                "black",
+                "white",
+                "blue",
+                "green",
+                "peacock-blue"
+            };
 
-            Console.WriteLine();
+            Console.WriteLine(string.Join(",",colours));
         }
     }
 }
