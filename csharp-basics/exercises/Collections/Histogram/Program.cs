@@ -6,10 +6,12 @@ namespace Histogram
 {
     class Program
     {
-        private const string Path = "D:\\Documents\\Programming_courses\\INTENSIVE COURSES HOMEWORK\\c-sharp-basic\\csharp-basics\\exercises\\Collections\\Histogram\\midtermscores.txt";
+        private const string FileName = "midtermscores.txt";
+        private static readonly string Path = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, FileName);
 
         private static void Main(string[] args)
         {
+            Console.WriteLine(Path);
             string inputNumbers = File.ReadAllText(Path);
             string[] numbers = inputNumbers.Split(" ");
             Dictionary<string, string> histogram = new Dictionary<string, string>

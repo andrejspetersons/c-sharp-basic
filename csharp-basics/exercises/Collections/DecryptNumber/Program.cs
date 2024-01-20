@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.PortableExecutable;
 using System.Text;
+using System.Threading.Channels;
 
 namespace DecryptNumber
 {
@@ -20,8 +22,29 @@ namespace DecryptNumber
                 "!)(#&%(*@#%"
             };
 
-            var result = cryptedNumbers.Select(str => new string(str.Select(ch => (Convert.ToInt32(ch)-' ').ToString()[0]).ToArray()));
-            Console.WriteLine(string.Join(Environment.NewLine,result));
+            Dictionary<char, int> symbolNumbers = new Dictionary<char, int>
+            {
+                {'!',1 },
+                {'@',2 },
+                {'#',3 },
+                {'$',4 },
+                {'%',5 },
+                {'^',6 },
+                {'&',7 },
+                {'*',8 },
+                {'(',9 },
+                {')',0 },
+            };
+
+            var decryptedResult = cryptedNumbers.Select(estr => estr.Select(symbol => symbolNumbers[symbol])).ToList();
+            
+            foreach (var item in decryptedResult)
+            {
+                Console.WriteLine(string.Join("",item));
+
+            }
+
+
         }
     }
 }

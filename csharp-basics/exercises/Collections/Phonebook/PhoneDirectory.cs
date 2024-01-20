@@ -1,65 +1,49 @@
 using System;
+using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 
 namespace PhoneBook
 {
     public class PhoneDirectory
     {
-        private PhoneEntry[] _data;
-        private int _dataCount;
+        private SortedDictionary<string,string> phoneDirectory { get; set; }
 
-        public PhoneDirectory() {
-            _data = new PhoneEntry[1];
-            _dataCount = 0;
-        }
-
-        private int Find(string name) {
-            for (var i = 0; i < _dataCount; i++) 
-            {
-                if (_data[i].name.Equals(name)) 
-                {
-                    return i;
-                }
-            }
-
-            return -1;
-        }
-
-        public string GetNumber(string name) 
+        public PhoneDirectory()
         {
-            var position = Find(name);
-            if (position == -1) 
+            phoneDirectory = new SortedDictionary<string, string>();
+            
+        }
+
+        public string FindNumber(string name)
+        {
+            return phoneDirectory.Count==0?
+                    "Dictionary is empty":
+                 (phoneDirectory.ContainsKey(name) ? phoneDirectory[name] : "No such number in directory");
+        }
+
+        public void PutNameNumber(string name,string number)
+        {
+            if (!phoneDirectory.ContainsKey(name))
             {
-                return null;
-            } 
-            else 
+                phoneDirectory.Add(name, number);
+            }
+            else
             {
-                return _data[position].number;
+                Console.WriteLine($"Name{name} already exists");
             }
         }
 
-        public void PutNumber(string name, string number) 
+        public void Display()
         {
-            if (name == null || number == null) 
+            foreach (var key in phoneDirectory.Keys)
             {
-                throw new Exception("name and number cannot be null");
+                Console.WriteLine("Name: {0} Number: {1}", key, phoneDirectory[key]);
             }
+        }
 
-            var i = Find(name);
-            if (i >= 0) 
-            {
-                _data[i].number = number;
-            }
-            else 
-            {
-                if (_dataCount == _data.Length) 
-                {
-                    Array.Resize(ref _data, (2 * _data.Length));
-                }
-
-                var newEntry = new PhoneEntry {name = name, number = number}; // Create a new pair.
-                _data[_dataCount] = newEntry;   // Add the new pair to the array.
-                _dataCount++;
-            }
+        public void Clear()
+        {
+            phoneDirectory.Clear();
         }
     }
 }
