@@ -2,28 +2,34 @@ using System;
 
 namespace DragRace
 {
-    public class Audi
+    public class Audi:ICar
     {
         private int _currentSpeed = 0;
 
-        public void SpeedUp() 
+        public void SlowDown()
         {
-            _currentSpeed;
+            _currentSpeed -= 8;
         }
 
-        public void SlowDown() 
+        public void SpeedUp()
         {
-            _currentSpeed;
+            _currentSpeed += 5;
         }
 
-        public string ShowCurrentSpeed() 
+        public void StartEngine()
+        {
+            Console.WriteLine("Brr-rr-rr-rr-rr");
+        }
+
+        public override string ToString()
+        {
+            return $"Current speed: {_currentSpeed}"; 
+        }
+
+        public string ShowCurrentSpeed()
         {
             return _currentSpeed.ToString();
         }
 
-        public void StartEngine() 
-        {
-            Console.WriteLine("Rrrrrrr.....");
-        }
     }
 }

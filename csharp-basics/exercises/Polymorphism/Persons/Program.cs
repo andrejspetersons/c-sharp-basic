@@ -4,10 +4,13 @@
     {
         static void Main(string[] args)
         {
-            /*
-             * - Create an instant of class Student and an instant of class Employee with proper values for the attributes.
-             * - Display the content of each class using Display() method.
-             */
+            Student student1= new Student(1, "Andrejs", "Petersons", "XXXX iela", 7.3);
+            student1.display();
+
+            Console.WriteLine();
+
+            Employee employee = new Employee(1, "John", "Abel", "Green St", "Front-End Developer");
+            employee.display();
         }
     }
 }

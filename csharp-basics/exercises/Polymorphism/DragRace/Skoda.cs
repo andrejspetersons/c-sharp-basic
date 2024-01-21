@@ -1,24 +1,29 @@
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace DragRace
 {
-    public class Tesla:ICar
+    internal class Skoda:ICar,ILexus
     {
         private int _currentSpeed = 0;
 
+
         public void SlowDown()
         {
-            _currentSpeed-=5;
+            _currentSpeed -= 3;
         }
 
         public void SpeedUp()
         {
-            _currentSpeed+=10;
+            _currentSpeed += 15;
         }
 
         public void StartEngine()
         {
-            Console.WriteLine("Silence");
+            Console.WriteLine("Rrrrrrr");
         }
 
         public override string ToString()
@@ -29,6 +34,11 @@ namespace DragRace
         public string ShowCurrentSpeed()
         {
             return _currentSpeed.ToString();
+        }
+
+        public void UseNitrousOxideEngine()
+        {
+            _currentSpeed += 35;
         }
     }
 }
