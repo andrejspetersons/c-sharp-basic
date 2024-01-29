@@ -5,39 +5,39 @@ namespace Account
 {
     class Account
     {
-        public string name { get; set; }
-        public double balance { get; private set; }
+        public string Name { get; private set; }
+        public decimal Balance { get; private set; }
 
-        public Account(string name,double balance)
+        public Account(string name,decimal balance)
         {
-            this.name = name;
-            this.balance = balance;
+            Name = name;
+            Balance = balance;
         }
 
         public void withdrawal(decimal amount)
         {
-            balance -= (double)amount;
+            Balance -= amount;
         }
 
         public void deposit(decimal amount)
         {
-            balance += (double)amount;
+            Balance += amount;
         }
 
         public decimal Getbalance()
         {
-            return (decimal)balance;
+            return (decimal)Balance;
         }
 
-        public static void Transfer(Account from,Account to,double howMuch)
+        public static void Transfer(Account from,Account to,decimal howMuch)
         {
-            from.withdrawal((decimal)howMuch);
-            to.deposit((decimal)howMuch);
+            from.withdrawal(howMuch);
+            to.deposit(howMuch);
         }
 
         public void PrintAccount()
         {
-            Console.WriteLine($"Account name: {name}\nBalance: {balance}");  
+            Console.WriteLine($"Account name: {Name}\nBalance: {Balance}");  
         }
     }
 }

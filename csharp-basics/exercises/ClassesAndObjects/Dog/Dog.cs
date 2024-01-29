@@ -14,20 +14,20 @@ namespace Dog
 
     internal class Dog
     {
-        public string name { get; private set; }
+        public string Name { get; private set; }
         public Sex sex { get; private set; }
         public Dog Mother { get; private set; }
         public Dog Father { get; private set; }
 
         public Dog(string name,Sex sex)
         {
-            this.name = name;
+            Name = name;
             this.sex = sex;
         }
 
         public Dog(string name,Sex sex,Dog mother,Dog father)
         {
-            this.name = name;
+            Name = name;
             this.sex = sex;
             Mother = mother;
             Father = father;
@@ -35,12 +35,12 @@ namespace Dog
 
         public string fathersName()
         {
-            return Father == null ? "Unknown" : Father.name;
+            return Father == null ? "Unknown" : Father.Name;
         }
 
         public bool HasSameMotherAs(Dog otherDog)
         {
-            return Mother.name == otherDog.Mother.name;
+            return Mother.Name == otherDog.Mother.Name;
         }
     }
 }

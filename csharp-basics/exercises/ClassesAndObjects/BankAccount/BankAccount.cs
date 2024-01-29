@@ -8,25 +8,23 @@ namespace BankAccount
 {
     internal class BankAccount
     {
-        public string name { get; set; }
-        public double balance { get; private set; }
+        public string Name { get; private set; }
+        public double Balance { get; private set; }
 
         public BankAccount(string name,double balance)
         {
-            this.name = name;
-            this.balance = balance;
+            Name = name;
+            Balance = balance;
         }
         
         public string ShowUserNameAndBalance()
         {
-            return $"{name}, " + Format(balance);
+            return $"{Name}, " + Format(Balance);
         }
 
         public string Format(double balance)
         {         
             return balance < 0 ? $"-${Math.Abs(balance):F2}" : $"${balance:F2}";
         }
-
-
     }
 }

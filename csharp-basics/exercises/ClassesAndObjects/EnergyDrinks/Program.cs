@@ -13,8 +13,6 @@ namespace EnergyDrinks
              Program survey = new Program();
              double energyDrinkers = survey.CalculateEnergyDrinkers(NumberedSurveyed);
              double preferCitrus = survey.CalculatePreferCitrus(NumberedSurveyed);
-             
-
              Console.WriteLine("Total number of people surveyed " + NumberedSurveyed);
              Console.WriteLine("Approximately " + energyDrinkers + " bought at least one energy drink");
              Console.WriteLine(preferCitrus + " of those " + "prefer citrus flavored energy drinks.");

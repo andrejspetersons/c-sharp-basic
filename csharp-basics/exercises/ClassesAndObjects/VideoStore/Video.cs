@@ -35,6 +35,5 @@ namespace VideoStore
         {
             return $"Title: {title},Rating: {averageRating}"; 
         }
-
     }
 }

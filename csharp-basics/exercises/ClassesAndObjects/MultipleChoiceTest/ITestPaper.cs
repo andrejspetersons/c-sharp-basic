@@ -10,7 +10,6 @@ namespace MultipleChoiceTest
     {
         public string Subject { get; set; }
         public string[] MarkScheme { get; set; }
-        public string passMark { get; set; }
-
+        public string PassMark { get; set; }
     }
 }

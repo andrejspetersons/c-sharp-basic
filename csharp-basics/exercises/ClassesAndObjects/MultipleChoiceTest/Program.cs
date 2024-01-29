@@ -23,9 +23,6 @@ namespace MultipleChoiceTest
             student2.TakeTest(paper3, new string[] { "1A", "2C", "3A", "4C", "5D", "6C", "7B" });
 
             Console.WriteLine(string.Join(",", student2.TestTaken));
-
-
-
         }
     }
 }

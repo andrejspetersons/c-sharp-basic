@@ -15,7 +15,6 @@ namespace FuelConsumptionCalculator
             double result1 = testCar1.CalculateConsumption();
             double result2 = testCar2.CalculateConsumption();
 
-
             Console.WriteLine($"Fuel Consumption: {result1}\n" + $"Economy car: {testCar1.IsEconomyCar()}\n" + $"Hog Car {testCar1.IsGasHog()}\n");
             Console.WriteLine($"Fuel Consumption: {result2}\n" + $"Economy car: {testCar2.IsEconomyCar()}\n" + $"Hog Car {testCar2.IsGasHog()}\n");
 

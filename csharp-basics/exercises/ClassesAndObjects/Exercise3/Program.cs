@@ -5,18 +5,19 @@
         static void Main(string[] args)
         {
             Car car = new Car();
-            car.odometer = new Odometer(car);
-            car.fuelGauge = new FuelGauge(car);
-            car.fuelGauge.PutFuel(70);
-            Console.WriteLine($"Fuel={car.litrs}");
+            car.Odometer = new Odometer(car);
+            car.FuelGauge = new FuelGauge(car);
+            car.FuelGauge.PutFuel(70);
+            Console.WriteLine($"Fuel={car.Litrs}");
 
-            while (car.litrs > 0)
+            while (car.Litrs > 0)
             {
-                car.odometer.increaseMileage();
-                car.litrs = car.fuelGauge.GetCurrentFuel();
+                car.Odometer.IncreaseMileage();
+                car.Litrs = car.FuelGauge.GetCurrentFuel();
                 
             }
-            Console.WriteLine(car.odometer.GetCurrentMileage());
+
+            Console.WriteLine(car.Odometer.GetCurrentMileage());
         }
     }
 }

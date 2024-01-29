@@ -9,20 +9,20 @@ namespace FuelConsumptionCalculator
 {
     internal class Car
     {
-        public double startOdo { get; private set; }
-        public double currentMileage;
-        public double liters { get; private set; }
+        public double StartOdo { get; private set; }
+        public double CurrentMileage { get; private set; }
+        public double Liters { get; private set; }
 
         public Car(double startOdo)
         {
-            this.startOdo = startOdo;
-            liters = 0;
-            currentMileage = 0;
+            StartOdo = startOdo;
+            Liters = 0;
+            CurrentMileage = 0;
         }
 
         public double CalculateConsumption()
         {
-            return currentMileage / (double)liters;   
+            return CurrentMileage / (double)Liters;   
         }
 
         public bool IsGasHog()
@@ -37,11 +37,10 @@ namespace FuelConsumptionCalculator
 
         public void FillUp(int mileage,double liters)
         {
-            double OldOdoVal = this.startOdo;
-            startOdo += mileage;
-            currentMileage = startOdo - OldOdoVal;
-            this.liters+=liters;
+            double OldOdoVal = StartOdo;
+            StartOdo += mileage;
+            CurrentMileage = StartOdo - OldOdoVal;
+            Liters+=liters;
         }
-
     }
 }

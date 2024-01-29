@@ -70,9 +70,6 @@ namespace VideoStore
             _videostore.ReceiveRating("Home Alone", 8.5);
             _videostore.ReceiveRating("Inception", 8.5);
             _videostore.ReceiveRating("Inception", 9.5);
-        }
-
-
-        
+        }  
     }
 }

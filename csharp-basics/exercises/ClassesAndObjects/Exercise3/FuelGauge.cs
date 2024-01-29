@@ -9,106 +9,100 @@ namespace Exercise3
 {
     internal class Car
     {
-        public double litrs;
-        public double currentMileage;
-        public Odometer odometer;
-        public FuelGauge fuelGauge;
+        public double Litrs;
+        public double CurrentMileage;
+        public Odometer Odometer;
+        public FuelGauge FuelGauge;
         
         public Car()
         {
-            litrs = 0;
-            currentMileage = 0;
-            odometer = new(this);
-            fuelGauge = new(this);
+            Litrs = 0;
+            CurrentMileage = 0;
+            Odometer = new(this);
+            FuelGauge = new(this);
         }
 
     }
 
     internal class FuelGauge
     {
-        public Car car;
+        public Car Car;
 
         public FuelGauge(Car car)
         {
-            this.car = car;
+            Car = car;
         }
 
         public double GetCurrentFuel()
         {
-            return car.litrs;
+            return Car.Litrs;
         }
 
         public string GetFuelReport()
         {
-            return $"Current amount of fuel:{car.litrs}";
+            return $"Current amount of fuel:{Car.Litrs}";
         }
 
         public void PutFuel(double liters)
         {
-            if (car.litrs >= 70||liters>70)
+            if (Car.Litrs >= 70||liters>70)
             {
-                car.litrs = 70;
+                Car.Litrs = 70;
             }
             else
             {
-                car.litrs += liters;
+                Car.Litrs += liters;
             }
         }
 
         public void FuelBurn()
         {
-            if (car.litrs <= 0)
+            if (Car.Litrs <= 0)
             {
                 Console.WriteLine($"Fuel is zero");
                 return;
             }
             else
             {
-                car.litrs -= 1;
+                Car.Litrs -= 1;
             }
         }
     }
 
     internal class Odometer
     {
-        public Car car;
-        public FuelGauge fuelgauge;
+        public Car Car;
+        public FuelGauge FuelGauge;
+        public double CurrentMileage;
 
         public Odometer(Car car)
         {
-            this.car = car;
-            fuelgauge = new FuelGauge(this.car);
+            Car = car;
+            FuelGauge = new FuelGauge(Car);
         }
-
-        public double currentMileage;
 
         public double GetCurrentMileage()
         {
-            return car.currentMileage;
+            return Car.CurrentMileage;
         }
 
-        public double GetMileageReport()
+        public string GetMileageReport()
         {
-            return car.currentMileage;
+            return $"Current Mileage:{Car.CurrentMileage}";
         }
 
-        public void increaseMileage()
+        public void IncreaseMileage()
         {
-            car.currentMileage += 1;
-            if (car.currentMileage > 999999)
-            {
-                car.currentMileage = 0;
-            }
-            else if(car.currentMileage%10==0)
-            {
+            Car.CurrentMileage += 1;
 
-                 fuelgauge.FuelBurn();
+            if (Car.CurrentMileage > 999999)
+            {
+                Car.CurrentMileage = 0;
             }
-            
+            else if(Car.CurrentMileage%10==0)
+            {
+                 FuelGauge.FuelBurn();
+            }    
         }
-
-
     }
-
-    
 }

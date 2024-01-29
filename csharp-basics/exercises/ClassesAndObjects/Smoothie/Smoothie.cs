@@ -8,22 +8,20 @@ namespace Smoothie
 {
     internal class Smoothie
     {
-        public string[] ingredients { get; set; }
+        public string[] Ingredients { get; set; }
 
-        public Smoothie(string[]Ingredients)
+        public Smoothie(string[]ingredients)
         {
-            ingredients = Ingredients;
+            Ingredients = ingredients;
         }
 
         public double GetCost()
         {
-            //|Strawberries|£1.50 |Banana |£0.50 |Mango |£2.50 |Blueberries |£1.00
-            //|Raspberries |£1.00 |Apple |£1.75 |Pineapple |£3.50
             double totalCost =0;
 
-            for (int i = 0; i < ingredients.Length; i++)
+            for (int i = 0; i < Ingredients.Length; i++)
             {
-                switch (ingredients[i])
+                switch (Ingredients[i])
                 {
                     case "Strawberries":
                         totalCost += 1.5;
@@ -58,9 +56,9 @@ namespace Smoothie
 
         public string GetName()
         {
-            return ingredients.Length == 1 ? 
-                $"{ingredients[0]} Smoothie" : 
-                string.Join(" ",ingredients.Select(ingredient=> 
+            return Ingredients.Length == 1 ? 
+                $"{Ingredients[0]} Smoothie" : 
+                string.Join(" ",Ingredients.Select(ingredient=> 
                 ingredient.EndsWith("berries")?ingredient.Replace("berries","berry"):ingredient)) +" Fusion";
         }
         

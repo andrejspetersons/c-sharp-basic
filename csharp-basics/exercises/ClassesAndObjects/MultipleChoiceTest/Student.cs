@@ -13,8 +13,7 @@ namespace MultipleChoiceTest
         public List<string> messages = new List<string>();
 
         public void TakeTest(ITestPaper paper, string[]answers)
-        {
-            
+        {        
             int maxScore = paper.MarkScheme.Length;
             int score = 0;
 
@@ -31,7 +30,7 @@ namespace MultipleChoiceTest
             }
 
             double result = (double)score / maxScore * 100;
-            string requredResult = Regex.Match(paper.passMark, "[0-9]+").Value;
+            string requredResult = Regex.Match(paper.PassMark, "[0-9]+").Value;
 
             if (result > int.Parse(requredResult))
             {

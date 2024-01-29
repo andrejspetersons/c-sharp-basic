@@ -15,7 +15,7 @@
 
             Console.Write("Enter the annual interest rate:");
             int annualInterest = Convert.ToInt32(Console.ReadLine());
-            savingsAccount.annualInterest = annualInterest;
+            savingsAccount.AnnualInterest = annualInterest;
 
             Console.Write("How long has the account been opened?");
             int month = Convert.ToInt32(Console.ReadLine());
@@ -35,6 +35,7 @@
                 sumInterests += savingsAccount.calculateMonthlyInterestRate();
                 savingsAccount.addMonthlyInterests();            
             }
+
             Console.WriteLine($"Total deposited: ${sumDepo:F2}");
             Console.WriteLine($"Total withdrawal: ${sumWithdrawal:F2}");
             Console.WriteLine($"Interest earned: ${Math.Round(sumInterests,2)}");

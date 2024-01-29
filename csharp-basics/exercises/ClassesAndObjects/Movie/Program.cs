@@ -12,7 +12,7 @@
             };
 
             Movie[] result = GetPG(movies);
-            Console.WriteLine(string.Join(",",result.Select(movie=>$"{movie.title},{movie.studio},{movie.rating}")));
+            Console.WriteLine(string.Join(",",result.Select(movie=>$"{movie.Title},{movie.Studio},{movie.Rating}")));
         }
 
         public static Movie[] GetPG(Movie[] movies)
@@ -21,7 +21,7 @@
 
             for (int i = 0; i < movies.Length; i++)
             {
-                if (movies[i].rating == "PG")
+                if (movies[i].Rating == "PG")
                 {
                     movieList.Add(movies[i]);
                 }

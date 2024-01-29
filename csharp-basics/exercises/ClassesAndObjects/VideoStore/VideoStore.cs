@@ -39,6 +39,5 @@ namespace VideoStore
         {
             return _inventory.ToList();
         }
-
     }
 }

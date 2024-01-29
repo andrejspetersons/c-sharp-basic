@@ -10,13 +10,13 @@ namespace MultipleChoiceTest
     {
         public string Subject { get; set; }
         public string[] MarkScheme { get; set; }
-        public string passMark { get; set; }
+        public string PassMark { get; set; }
 
         public TestPaper(string name,string[]answers,string procents)
         {
             Subject = name;
             MarkScheme = answers;
-            passMark = procents;
+            PassMark = procents;
         }
 
        

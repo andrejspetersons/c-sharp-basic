@@ -9,39 +9,37 @@ namespace SavingsAccount
 {
     internal class SavingsAccount
     {
-        public decimal balance { get ;private set; }
-        public decimal annualInterest { get; set; }
+        public decimal Balance { get ;private set; }
+        public decimal AnnualInterest { get; set; }
 
-        public decimal Balance
+        public decimal GetBalance
         {
-            get { return balance; }
+            get { return Balance; }
         }
 
         public SavingsAccount(decimal startingBalance)
         {
-            balance = startingBalance;
+            Balance = startingBalance;
         }
 
         public void subWithdrawal(decimal amount)
         {
-            balance -= amount;
+            Balance -= amount;
         }
 
         public void addDeposit(decimal amount)
         {
-            balance += amount;
+            Balance += amount;
         }
 
         public decimal calculateMonthlyInterestRate()
         {
-            return balance* annualInterest / 12;
+            return Balance* AnnualInterest / 12;
         }
 
         public void addMonthlyInterests()
         {
-            balance += calculateMonthlyInterestRate();    
+            Balance += calculateMonthlyInterestRate();    
         }
-
-
     }
 }

@@ -9,22 +9,22 @@ namespace Movie
 {
     internal class Movie
     {
-        public string title { get; private set; }
-        public string studio { get; private set; }
-        public string rating { get; private set; }
+        public string Title { get; private set; }
+        public string Studio { get; private set; }
+        public string Rating { get; private set; }
 
         public Movie(string title,string studio,string rating)
         {
-            this.title = title;
-            this.studio = studio;
-            this.rating = rating;
+            Title = title;
+            Studio = studio;
+            Rating = rating;
         }
 
         public Movie(string title, string studio)
         {
-            this.title = title;
-            this.studio = studio;
-            rating="PG";
+            Title = title;
+            Studio = studio;
+            Rating="PG";
         }
     }
 }

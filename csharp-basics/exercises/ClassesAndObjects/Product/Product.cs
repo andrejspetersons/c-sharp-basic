@@ -8,30 +8,30 @@ namespace Product
 {
     internal class Product
     {
-        public string name { get; set; }
-        public double price { get; private set; }
-        public int amount { get; private set; }
+        public string Name { get; set; }
+        public double Price { get; private set; }
+        public int Amount { get; private set; }
 
         public Product(string name,double priceAtStart,int amountAtStart)
         {
-            this.name = name;
-            price = priceAtStart;
-            amount = amountAtStart;         
+            Name = name;
+            Price = priceAtStart;
+            Amount = amountAtStart;         
         }
 
         public void ChangePrice(double newPrice)
         {
-            price = newPrice;
+            Price = newPrice;
         }
 
         public void ChangeQuantity(int newQuantity)
         {
-            amount = newQuantity;
+            Amount = newQuantity;
         }
 
         public void PrintProduct()
         {
-            Console.WriteLine($"{name},price {price} EUR,{amount} units");
+            Console.WriteLine($"{Name},price {Price} EUR,{Amount} units");
         }
     }
 }
