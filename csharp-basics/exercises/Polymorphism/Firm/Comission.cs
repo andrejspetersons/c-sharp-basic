@@ -7,31 +7,31 @@ namespace Firm
 {
     internal class Comission : Hourly
     {
-        public double totalSales;
-        private readonly double comissionRate;
+        public double TotalSales { get; private set; }
+        private readonly double _comissionRate;
 
         public Comission(string eName, string eAddress, string ePhone, string socSecNumber, double rate,double comissionRate) : base(eName, eAddress, ePhone, socSecNumber, rate)
         {
-            this.comissionRate = comissionRate;
-            totalSales = 0;
+            _comissionRate = comissionRate;
+            TotalSales = 0;
         }
 
         public void AddSales(double sales)
         {
-            totalSales += sales;       
+            TotalSales += sales;       
         }
 
         public override double Pay()
         {
-            var payment = base.Pay() + (totalSales*comissionRate);
-            totalSales = 0;
+            var payment = base.Pay() + (TotalSales*_comissionRate);
+            TotalSales = 0;
             return payment;
         }
 
         public override string ToString()
         {
             var result = base.ToString();
-            result += "\nTotal sales: "+totalSales;
+            result += "\nTotal sales: "+TotalSales;
             return result;
         }
     }

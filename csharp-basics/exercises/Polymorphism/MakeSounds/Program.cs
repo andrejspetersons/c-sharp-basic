@@ -7,37 +7,21 @@ namespace MakeSounds
     {
         private static void Main(string[] args)
         {
-            List<Radio> radioList = new List<Radio>
+            List<ISound> itemSounds = new List<ISound>
             {
+                new Firework(),
                 new Radio(),
+                new Parrot(),
+                new Firework(),
                 new Radio(),
-                new Radio(),
-                new Radio(),
-                new Radio(),
-                new Radio(),
+                new Parrot(),
+                new Firework(),
             };
 
-            List<Parrot> parrotList = new List<Parrot>
+            for (int i = 0; i < itemSounds.Count; i++)
             {
-                new Parrot(),
-                new Parrot(),
-                new Parrot(),
-                new Parrot(),
-                new Parrot(),
-                new Parrot(),
-            };
-
-            for (int i = 0; i < radioList.Count; i++)
-            {
-                radioList[i].PlaySound();
+                itemSounds[i].PlaySound();
             }
-
-            for (int i = 0; i < parrotList.Count; i++)
-            {
-               parrotList[i].PlaySound();
-            }
-
-
         }
     }
 }

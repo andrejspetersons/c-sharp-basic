@@ -7,8 +7,8 @@ namespace Persons
 {
     internal class Person
     {
-        private static int lastId=0;
-        public int id { get; set; }
+        private static int _lastId=0;
+        public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Adress { get; set; }
@@ -19,7 +19,7 @@ namespace Persons
 
         public Person(string name,string surname,string address)
         {
-            id = ++lastId;
+            Id = ++_lastId;
             FirstName = name;
             LastName = surname;
             Adress = address;
@@ -29,32 +29,32 @@ namespace Persons
 
     class Student : Person
     {
-        public double gpa { get; set; }
+        public double Gpa { get; set; }
 
         public Student(int ID, string name, string surname, string address,double gpa) : base(name, surname, address)
         {
-            this.gpa = gpa;
+            Gpa = gpa;
         }
 
         public override void display()
         {
             base.display();
-            Console.WriteLine($"GPA: {gpa}");
+            Console.WriteLine($"GPA: {Gpa}");
         }
     }
 
     class Employee : Person
     {
-        public string jobTitle;
+        public string JobTitle;
         public Employee(int ID, string name, string surname, string address,string jobtitle) : base(name, surname, address)
         {
-            jobTitle = jobtitle;
+            JobTitle = jobtitle;
         }
 
         public override void display()
         {
             base.display();
-            Console.WriteLine($"Job Title: {jobTitle}");
+            Console.WriteLine($"Job Title: {JobTitle}");
         }
     }
 }

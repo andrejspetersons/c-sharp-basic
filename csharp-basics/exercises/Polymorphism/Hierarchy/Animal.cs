@@ -6,12 +6,12 @@ namespace Hierarchy
 {
     public abstract class Animal
     {
-        public string animalName { get; set; }
-        public string animalType { get; set; }
-        public double animalWeight { get; set; }
-        public int foodEaten { get; set; }
-        public abstract void makeSound();
-        public abstract void eat(Food f);
+        public string AnimalName { get; set; }
+        public string AnimalType { get; set; }
+        public double AnimalWeight { get; set; }
+        public int FoodEaten { get; set; }
+        public abstract void MakeSound();
+        public abstract void Eat(Food f);
         public abstract bool AnimalEatFood(Food f);
     }
 }

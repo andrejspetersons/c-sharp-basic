@@ -4,19 +4,19 @@ namespace AdApp
     {
         private int _rate;
         private int _numDays;
-        private bool isPrime;
+        private bool _isPrime;
 
 
         public Hoarding(int fee,int days,int rate,bool prime) : base(fee)
         {
             _numDays = days;
             _rate = rate;
-            isPrime = prime;
+            _isPrime = prime;
         }
 
         public override int Cost() 
         {
-            return isPrime?base.Cost()+((_numDays*_rate*150)/100):base.Cost()+(_numDays*_rate);
+            return _isPrime?base.Cost()+((_numDays*_rate*150)/100):base.Cost()+(_numDays*_rate);
         }
 
         public override string ToString() 

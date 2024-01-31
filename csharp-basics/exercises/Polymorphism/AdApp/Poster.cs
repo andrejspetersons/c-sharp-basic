@@ -10,30 +10,30 @@ namespace AdApp
 {
     internal class Poster:Advert
     {
-        private int width;
-        private int height;
-        private int dimension;
-        private int numberOfCopies;
+        private int _width;
+        private int _height;
+        private int _dimension;
+        private int _numberOfCopies;
         private int _rate;
 
         public Poster(int fee,int width,int height,int copies,int rate):base(fee)
         {
-            this.width = width;
-            this.height = height;
-            dimension = width * height;
+            _width = width;
+            _height = height;
+            _dimension = width * height;
             _rate = rate;
-            numberOfCopies = copies;
+            _numberOfCopies = copies;
         }
 
         public override int Cost()
         {
-            return base.Cost()+(dimension*numberOfCopies*_rate);
+            return base.Cost()+(_dimension*_numberOfCopies*_rate);
         }
 
         public override string ToString()
         {
             
-            var result = base.ToString()+ $"\nDimension: {width * height}\nNumber of copies: {numberOfCopies}\n Rate per copy: {_rate}";
+            var result = base.ToString()+ $"\nDimension: {_width * _height}\nNumber of copies: {_numberOfCopies}\n Rate per copy: {_rate}";
             return result;
         }
     }

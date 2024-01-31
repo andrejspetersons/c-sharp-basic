@@ -58,7 +58,7 @@ namespace Hierarchy
                     }
 
                     animal = new Cat();
-                    ((Cat)animal).breed = information[4];
+                    ((Cat)animal).Breed = information[4];
                     break;
 
                 case "tiger":
@@ -78,24 +78,24 @@ namespace Hierarchy
                     return;
             }
 
-            animal.animalType = information[0];
-            animal.animalName = information[1];
-            animal.animalWeight = double.Parse(information[2], culture);
-            animal.livingRegion = information[3];
-            animal.foodEaten = quantity;
+            animal.AnimalType = information[0];
+            animal.AnimalName = information[1];
+            animal.AnimalWeight = double.Parse(information[2], culture);
+            animal.LivingRegion = information[3];
+            animal.FoodEaten = quantity;
 
             string foodText = $"{foodList[rIndex].GetType().Name} {quantity}";
             Console.WriteLine(foodText);
-            animal.eat(foodList[rIndex]);
+            animal.Eat(foodList[rIndex]);
 
             if (!animal.AnimalEatFood(foodList[rIndex]))
             {
                 Console.WriteLine($"{information[0]} don't eat that type of food!");
-                animal.foodEaten = 0;
+                animal.FoodEaten = 0;
             }
             else
             {
-                animal.makeSound();
+                animal.MakeSound();
             }
 
         animalList.Add(animal);

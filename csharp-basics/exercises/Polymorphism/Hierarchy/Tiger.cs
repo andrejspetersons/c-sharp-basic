@@ -11,12 +11,12 @@ namespace Hierarchy
             return f is Meat;
         }
 
-        public override void eat(Food f)
+        public override void Eat(Food f)
         {
             //doesTheAnimalEatFood(f);  
         }
 
-        public override void makeSound()
+        public override void MakeSound()
         {
             Console.WriteLine("ROAAR!!!");
         }

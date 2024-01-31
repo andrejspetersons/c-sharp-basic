@@ -6,26 +6,26 @@ namespace Hierarchy
 {
     internal class Cat : Feline
     {
-        public string breed { get; set; }
+        public string Breed { get; set; }
 
         public override bool AnimalEatFood(Food f)
         {
             return f is Vegetable || f is Meat;    
         }
 
-        public override void eat(Food f)
+        public override void Eat(Food f)
         {
                
         }
 
-        public override void makeSound()
+        public override void MakeSound()
         {
             Console.WriteLine("Meowwww");
         }
 
         public override string ToString()
         {
-            return $"{animalType}[{animalName},{breed},{animalWeight},{livingRegion},{foodEaten}]";
+            return $"{AnimalType}[{AnimalName},{Breed},{AnimalWeight},{LivingRegion},{FoodEaten}]";
         }
     }
 }

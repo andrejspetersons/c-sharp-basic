@@ -8,7 +8,6 @@ namespace VendingMachine
 {
     internal class VendingMachine : IVendingMachine
     {
-        private Money currentMoney;
         public string Manufacturer { get;}
 
         public bool HasProducts { get; private set; }
