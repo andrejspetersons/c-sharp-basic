@@ -1,22 +1,48 @@
-﻿namespace ListExercise11
+﻿using System;
+using System.Collections.Generic;
+
+namespace ListExercise11
 {
     class Program
     {
         static void Main(string[] args)
         {
-            //TODO: Create an List with string elements
+            List<string> groceryList = new List<string>
+            {
+                "Bread",
+                "Milk",
+                "Eggs"
+            };
 
-            //TODO: Add 10 values to list
+            groceryList.Add("Apple");
+            groceryList.Add("Melon");
+            groceryList.Add("Chips");
+            groceryList.Add("Lemonade");
+            groceryList.Add("Chocolate");
+            groceryList.Add("Ice Cream");
+            groceryList.Add("Salt");
+            groceryList.Add("Dumplings");
+            groceryList.Add("Sausages");
+            groceryList.Add("Fish");
 
-            //TODO: Add new value at 5th position
+            groceryList.Insert(5, "Cheese");
+            Console.WriteLine(string.Join(",",groceryList));
 
-            //TODO: Change value at last position (Calculate last position programmatically)
+            groceryList.Insert(groceryList.Count - 1, "Red Wine");
+            Console.WriteLine(string.Join(",", groceryList));
 
-            //TODO: Sort your list in alphabetical order
+            groceryList.Sort();
+            Console.WriteLine(string.Join(",", groceryList));
 
-            //TODO: Check if your list contains "Foobar" element
+            bool containsValue = groceryList.Contains("Foobar");
+            Console.WriteLine(containsValue);
 
-            //TODO: Print each element of list using loop
+            Console.WriteLine();
+
+            for (int i = 0; i < groceryList.Count; i++)
+            {
+                Console.WriteLine(groceryList[i]);
+            }
         }
     }
 }

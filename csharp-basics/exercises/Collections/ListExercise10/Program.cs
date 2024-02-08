@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ListExercise10
 {
@@ -18,10 +19,10 @@ namespace ListExercise10
 
             Console.WriteLine("Original array list: ");
             Console.WriteLine(string.Join(",", colors));
+            colors.Clear();
 
-            //TODO: Remove all elements from list
-            //...
-
+            Console.WriteLine();
+            
             Console.WriteLine("New array list: ");
             Console.WriteLine(string.Join(",", colors));
         }
