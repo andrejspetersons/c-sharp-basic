@@ -1,24 +1,29 @@
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace DragRace
 {
-    public class Tesla:ICar
+    internal class KIA : ICar
     {
         private int _currentSpeed = 0;
 
+    
         public void SlowDown()
         {
-            _currentSpeed-=5;
+            _currentSpeed -= 3;
         }
 
         public void SpeedUp()
         {
-            _currentSpeed+=10;
+            _currentSpeed += 12;
         }
 
         public void StartEngine()
         {
-            Console.WriteLine("Silence");
+            Console.WriteLine("Vrvrvrooom");
         }
 
         public override string ToString()

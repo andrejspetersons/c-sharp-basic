@@ -24,7 +24,7 @@ namespace AdApp
 
         public override string ToString()
         {
-            return "Advert Campaign" + _campaign + "\nTotal Cost = "+ GetCost();
+            return "Advert Campaign: " + string.Join(Environment.NewLine,_campaign) + "\nTotal Cost = "+ GetCost();
         }
     }
 }
